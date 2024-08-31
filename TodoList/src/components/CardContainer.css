@@ -1,0 +1,80 @@
+.todo-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* margin: 0 auto; */
+}
+
+.column {
+    background-color: rgba(208, 148, 245, 0.253);
+    border-radius: 5px;
+    padding: 10px;
+    width: 22%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+.task-card {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button.click {
+    background-color: #fff;
+    border: 1px solid rgba(196, 119, 244, 0.253);
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.buttons button.click:hover {
+    background-color: rgba(196, 119, 244, 0.123);
+}
+
+button.prev-click, button.next-click {
+    border: 0;
+    display: flex;
+    align-items: center;
+}
+
+.headings {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+@media (max-width: 1200px) {
+  .column {
+    width: calc(50% - 20px);
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+    flex: 1 1 100%;
+    margin-top: 30px;
+  }
+  .todo-list {
+    padding: 0;
+    margin: -20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
